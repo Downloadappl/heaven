@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسلسل الجنة والنار</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+            direction: rtl;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1 {
+            color: #eaeaea;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .episode-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .episode-item {
+            width: 90%;
+            max-width: 500px;
+            margin: 10px 0;
+        }
+
+        .episode-button {
+            width: 100%;
+            padding: 20px;
+            font-size: 24px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .episode-button:hover {
+            background-color: #555;
+            transform: translateY(-4px);
+        }
+
+        .episode-button i {
+            margin-left: 10px;
+        }
+
+        .video-container {
+            display: none; /* إخفاء مشغل الفيديو في البداية */
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .theme-toggle.light {
+            color: #000;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #fff;
+        }
+
+        .dark-mode .episode-button {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-mode .episode-button:hover {
+            background-color: #555;
+        }
+
+        .dark-mode .theme-toggle {
+            color: #fff;
+        }
+
+        .light-mode {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .light-mode .episode-button {
+            background-color: #ddd;
+            color: #000;
+        }
+
+        .light-mode .episode-button:hover {
+            background-color: #bbb;
+        }
+
+        .light-mode .theme-toggle {
+            color: #000;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </div>
+    <h1>مسلسل الجنة والنار</h1>
+    <ul class="episode-list">
+        <!-- أزرار الحلقات -->
+        <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://vod3.cf.dmcdn.net/sec2(Qr1fHJvA_61Cc6BbbhIxwtaJCidfLposS3tmkg1L6UloTPpKFCBKnQRhDBhzgu3UgIzGYXxf7Sh9FwMRV80YapWXfebAVU_3jMJpvR1d5_6qbgs0rqHw-xWDapC6cPzXrQfvzvPYk7AjE-pV0_NwLw)/video/863/293/552392368_mp4_h264_aac_hq_3.m3u8#cell=cf3', this)">
+                <i class="fas fa-play-circle"></i> الحلقة 1
+            </button>
+            <div class="video-container" id="videoContainer1">
+                <video id="videoPlayer1" controls>
+                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+        </li>
+        <!-- أضف المزيد من الأزرار بنفس الطريقة -->
+      <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://vod3.cf.dmcdn.net/sec2(Qr1fHJvA_61Cc6BbbhIxwtaJCidfLposS3tmkg1L6UloTPpKFCBKnQRhDBhzgu3UgIzGYXxf7Sh9FwMRV80YapWXfebAVU_3jMJpvR1d5_6qbgs0rqHw-xWDapC6cPzXrQfvzvPYk7AjE-pV0_NwLw)/video/863/293/552392368_mp4_h264_aac_hq_3.m3u8#cell=cf3', this)">
+                <i class="fas fa-play-circle"></i> الحلقة 2
+            </button>
+            <div class="video-container" id="videoContainer1">
+                <video id="videoPlayer1" controls>
+                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+      </li>
+      <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://vod3.cf.dmcdn.net/sec2(Qr1fHJvA_61Cc6BbbhIxwtaJCidfLposS3tmkg1L6UloTPpKFCBKnQRhDBhzgu3UgIzGYXxf7Sh9FwMRV80YapWXfebAVU_3jMJpvR1d5_6qbgs0rqHw-xWDapC6cPzXrQfvzvPYk7AjE-pV0_NwLw)/video/863/293/552392368_mp4_h264_aac_hq_3.m3u8#cell=cf3', this)">
+                <i class="fas fa-play-circle"></i> الحلقة 3
+            </button>
+            <div class="video-container" id="videoContainer1">
+                <video id="videoPlayer1" controls>
+                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+      </li>
+      <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://vod3.cf.dmcdn.net/sec2(Qr1fHJvA_61Cc6BbbhIxwtaJCidfLposS3tmkg1L6UloTPpKFCBKnQRhDBhzgu3UgIzGYXxf7Sh9FwMRV80YapWXfebAVU_3jMJpvR1d5_6qbgs0rqHw-xWDapC6cPzXrQfvzvPYk7AjE-pV0_NwLw)/video/863/293/552392368_mp4_h264_aac_hq_3.m3u8#cell=cf3', this)">
+                <i class="fas fa-play-circle"></i> الحلقة 4
+            </button>
+            <div class="video-container" id="videoContainer1">
+                <video id="videoPlayer1" controls>
+                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+      </li>
+      <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://vod3.cf.dmcdn.net/sec2(Qr1fHJvA_61Cc6BbbhIxwtaJCidfLposS3tmkg1L6UloTPpKFCBKnQRhDBhzgu3UgIzGYXxf7Sh9FwMRV80YapWXfebAVU_3jMJpvR1d5_6qbgs0rqHw-xWDapC6cPzXrQfvzvPYk7AjE-pV0_NwLw)/video/863/293/552392368_mp4_h264_aac_hq_3.m3u8#cell=cf3', this)">
+                <i class="fas fa-play-circle"></i> الحلقة 5
+            </button>
+            <div class="video-container" id="videoContainer1">
+                <video id="videoPlayer1" controls>
+                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+      </li>
+      <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://vod3.cf.dmcdn.net/sec2(Qr1fHJvA_61Cc6BbbhIxwtaJCidfLposS3tmkg1L6UloTPpKFCBKnQRhDBhzgu3UgIzGYXxf7Sh9FwMRV80YapWXfebAVU_3jMJpvR1d5_6qbgs0rqHw-xWDapC6cPzXrQfvzvPYk7AjE-pV0_NwLw)/video/863/293/552392368_mp4_h264_aac_hq_3.m3u8#cell=cf3', this)">
+                <i class="fas fa-play-circle"></i> الحلقة 6
+            </button>
+            <div class="video-container" id="videoContainer1">
+                <video id="videoPlayer1" controls>
+                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+      </li>
+      <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://vod3.cf.dmcdn.net/sec2(Qr1fHJvA_61Cc6BbbhIxwtaJCidfLposS3tmkg1L6UloTPpKFCBKnQRhDBhzgu3UgIzGYXxf7Sh9FwMRV80YapWXfebAVU_3jMJpvR1d5_6qbgs0rqHw-xWDapC6cPzXrQfvzvPYk7AjE-pV0_NwLw)/video/863/293/552392368_mp4_h264_aac_hq_3.m3u8#cell=cf3', this)">
+                <i class="fas fa-play-circle"></i> الحلقة 7
+            </button>
+            <div class="video-container" id="videoContainer1">
+                <video id="videoPlayer1" controls>
+                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+      </li>
+      <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://vod3.cf.dmcdn.net/sec2(Qr1fHJvA_61Cc6BbbhIxwtaJCidfLposS3tmkg1L6UloTPpKFCBKnQRhDBhzgu3UgIzGYXxf7Sh9FwMRV80YapWXfebAVU_3jMJpvR1d5_6qbgs0rqHw-xWDapC6cPzXrQfvzvPYk7AjE-pV0_NwLw)/video/863/293/552392368_mp4_h264_aac_hq_3.m3u8#cell=cf3', this)">
+                <i class="fas fa-play-circle"></i> الحلقة 8
+            </button>
+            <div class="video-container" id="videoContainer1">
+                <video id="videoPlayer1" controls>
+                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+      </li>
+      <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://vod3.cf.dmcdn.net/sec2(Qr1fHJvA_61Cc6BbbhIxwtaJCidfLposS3tmkg1L6UloTPpKFCBKnQRhDBhzgu3UgIzGYXxf7Sh9FwMRV80YapWXfebAVU_3jMJpvR1d5_6qbgs0rqHw-xWDapC6cPzXrQfvzvPYk7AjE-pV0_NwLw)/video/863/293/552392368_mp4_h264_aac_hq_3.m3u8#cell=cf3', this)">
+                <i class="fas fa-play-circle"></i> الحلقة 9
+            </button>
+            <div class="video-container" id="videoContainer1">
+                <video id="videoPlayer1" controls>
+                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+      </li>
+      <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://vod3.cf.dmcdn.net/sec2(Qr1fHJvA_61Cc6BbbhIxwtaJCidfLposS3tmkg1L6UloTPpKFCBKnQRhDBhzgu3UgIzGYXxf7Sh9FwMRV80YapWXfebAVU_3jMJpvR1d5_6qbgs0rqHw-xWDapC6cPzXrQfvzvPYk7AjE-pV0_NwLw)/video/863/293/552392368_mp4_h264_aac_hq_3.m3u8#cell=cf3', this)">
+                <i class="fas fa-play-circle"></i> الحلقه 10
+            </button>
+            <div class="video-container" id="videoContainer1">
+                <video id="videoPlayer1" controls>
+                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+      </li>
+      <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://vod3.cf.dmcdn.net/sec2(Qr1fHJvA_61Cc6BbbhIxwtaJCidfLposS3tmkg1L6UloTPpKFCBKnQRhDBhzgu3UgIzGYXxf7Sh9FwMRV80YapWXfebAVU_3jMJpvR1d5_6qbgs0rqHw-xWDapC6cPzXrQfvzvPYk7AjE-pV0_NwLw)/video/863/293/552392368_mp4_h264_aac_hq_3.m3u8#cell=cf3', this)">
+                <i class="fas fa-play-circle"></i> الحلقة 11
+            </button>
+            <div class="video-container" id="videoContainer1">
+                <video id="videoPlayer1" controls>
+                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+      </li>
+    </ul>
+
+    <script>
+        let currentVideoPlayer = null;
+
+        function playEpisode(url, button) {
+            // إيقاف الفيديو السابق إذا كان موجوداً
+            if (currentVideoPlayer) {
+                currentVideoPlayer.pause();
+                currentVideoPlayer.currentTime = 0; // إعادة تعيين الفيديو إلى البداية
+            }
+
+            // إخفاء جميع مشغلات الفيديو
+            document.querySelectorAll('.video-container').forEach(container => {
+                container.style.display = 'none';
+            });
+
+            // إظهار مشغل الفيديو الخاص بالحلقة المحددة
+            var videoContainer = button.nextElementSibling;
+            var videoPlayer = videoContainer.querySelector('video');
+            var videoSource = videoContainer.querySelector('source');
+
+            videoSource.src = url; // وضع رابط الحلقة في مصدر الفيديو
+            videoPlayer.load(); // تحميل الفيديو
+            videoPlayer.play(); // تشغيل الفيديو
+            videoContainer.style.display = 'block'; // إظهار مشغل الفيديو
+
+            currentVideoPlayer = videoPlayer; // تعيين الفيديو الحالي
+        }
+
+        function toggleTheme() {
+            var body = document.body;
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+            var icon = document.querySelector('.theme-toggle i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        }
+    </script>
+</body>
+</html>
