@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مسلسل الجنة والنار</title>
+    <title>مسلسل الجنة والنار | series Al-Jannah wal-Nar </title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
@@ -70,6 +70,7 @@
             width: 100%;
             max-width: 800px;
             text-align: center;
+            position: relative;
         }
 
         video {
@@ -77,6 +78,16 @@
             height: auto;
             border: 2px solid #333;
             border-radius: 8px;
+        }
+
+        .video-container img.watermark {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 100px; /* ضبط العرض حسب الحجم المناسب */
+            height: auto;
+            opacity: 0.8;
+            z-index: 10;
         }
 
         .theme-toggle {
@@ -135,9 +146,10 @@
         <i class="fas fa-moon"></i>
     </div>
     <h1>مسلسل الجنة والنار</h1>
+    <div class="welcome-message" style="font-size: 1.2em; margin-bottom: 20px;">شاهد مسلسل الجنة والنار مجان على موقعنا الالكترونيا</div>
     <ul class="episode-list">
-            <img src="https://media.infoplusnetwork.com/archive/image/2024/8/26/55b9212a-e8b9-419b-b972-3480dc6eaafe.jpg" alt="وصف الصورة" style="width: 250px; height: auto;">
-          <span style="font-size: 1.0em;">الجنة والنار مسلسل اجتماعي درامي واقعي تدور أحداثهُ داخل ذي قار، وتتمحور قصتهُ حول الصراع بين البشر والشياطين، بين الخير والشر، ويجسد العم فرج دور الشيطان وهو صاحب قدرات خيالية يعود إلى المنطقة بعد سبعة أيام من وفاة أخيه الذي طرده قبل عشرين عاماً.</span>
+        <img src="https://media.infoplusnetwork.com/archive/image/2024/8/26/55b9212a-e8b9-419b-b972-3480dc6eaafe.jpg" alt="وصف الصورة" style="width: 250px; height: auto;">
+        <span style="font-size: 1.0em;">الجنة والنار مسلسل اجتماعي درامي واقعي تدور أحداثهُ داخل ذي قار، وتتمحور قصتهُ حول الصراع بين البشر والشياطين، بين الخير والشر، ويجسد العم فرج دور الشيطان وهو صاحب قدرات خيالية يعود إلى المنطقة بعد سبعة أيام من وفاة أخيه الذي طرده قبل عشرين عاماً.</span>
         <!-- أزرار الحلقات -->
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr1---sn-2uuxa3vh-3ovz.googlevideo.com/videoplayback?expire=1725406313&ei=CUjXZuOUFJSi9fwPneKH8AM&ip=2001%3A448a%3A10c4%3A34fc%3A68bb%3A55c9%3Af76e%3A52ae&id=o-AL40dqHszuHB3lBgCgceY1x3mHY0f7jzCroCxVRecYuo&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=nb&mm=31%2C29&mn=sn-2uuxa3vh-3ovz%2Csn-npoeener&ms=au%2Crdu&mv=m&mvi=1&pl=53&initcwndbps=921250&bui=AQmm2ewALwK3Xxlsl2FPnLrQYsOgzV6dwB4pvm7FbjCFVBiHwHEQIFyRGFFkXiiikoX10cmZVRQNtZbp&spc=Mv1m9k73hA3WzxgO1Vtg-ZaQgiiHVoCoqzq_EgyxGx1vJQVMu27oCO4&vprv=1&svpuc=1&mime=video%2Fmp4&ns=huW4IzhX51WHZoBnnEDr3zUQ&rqh=1&gir=yes&clen=78284500&ratebypass=yes&dur=2132.915&lmt=1725310096156192&mt=1725384322&fvip=4&c=WEB_CREATOR&sefc=1&txp=5538434&n=q0_cw2DTDKoGXg&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRQIgKyW8LnuL4BaYCgoJx0TD2WzITENW_fNbGVnWDhVe8D0CIQDQwjFKCxljouHY3OfonnoDDagSFAlWHDvCe_Je2vARHQ%3D%3D&sig=AJfQdSswRgIhAOBfDWo64gwTBpPNcKZQhqeokWD7JHIZzZ-MQGDQjp-CAiEA8JA1WbVXHdIS2goAGA8eMB_0q2DvaUsorSUM3z4T-tc%3D&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%A7%D9%88%D9%84%D9%89', this)">
@@ -145,125 +157,145 @@
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
-                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    <source id="videoSource1" src="" type="video/mp4">
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
+                <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
         </li>
         <!-- أضف المزيد من الأزرار بنفس الطريقة -->
-      <li class="episode-item">
+        <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr4---sn-p5h-jhoy.googlevideo.com/videoplayback?expire=1725406158&ei=bkfXZpT_L5TRp-oP7LWJ-AU&ip=41.251.185.211&id=o-AKe19pLX0SHRJNjmozzY_3en00NzdXANTEFbFVU6c9x2&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=NR&mm=31%2C29&mn=sn-p5h-jhoy%2Csn-apn7en7s&ms=au%2Crdu&mv=m&mvi=4&pl=21&initcwndbps=540000&bui=AQmm2ezdu2srwUPgFKmjXTUhru1P2JnWojxW2GSO-wkeOKcRVqHY_NVNR0gR-TbQKgxh6AKJWFIRuZr5&spc=Mv1m9l-nXSp8VQBCnjnmpoWSBkLKyPtcP3tCoJRa_vNvM_jl3akEyXs&vprv=1&svpuc=1&mime=video%2Fmp4&ns=X87k5B0iu2Bq7DlWa1r0hh8Q&rqh=1&gir=yes&clen=89100097&ratebypass=yes&dur=2053.758&lmt=1725295284918218&mt=1725384322&fvip=4&c=WEB_CREATOR&sefc=1&txp=5438434&n=SqyRRUWYmhMB3A&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRAIgBV8q63pt84t3_LSHXTeOwyWqx7Pjgyh5BN5TwQmZLBcCIF6svfp58nq8On9Xip3xZZ_-g0tsG9aJFlam-Ro_e2yj&sig=AJfQdSswRAIgR9Cogt9Fux_g7vSGMZOsp5IcYiwVj0JTUOKLiCn6Q0UCIGLhCZnfHgN4vHKB5XsIT9iPbnadAMR428688UOYddXL&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 2
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
-                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    <source id="videoSource1" src="" type="video/mp4">
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
+                <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
-      </li>
-      <li class="episode-item">
-            <button class="episode-button" onclick="playEpisode('https://rr4---sn-3u-nf0z.googlevideo.com/videoplayback?expire=1725388839&ei=xwPXZp7_HubE1d8P2aiboAs&ip=121.136.213.154&id=o-AHSST9H2-aoJP9Z6Ar-6z5HrTEgyk1ow6W-w0XcvikO4&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=B5&mm=31%2C29&mn=sn-3u-nf0z%2Csn-3u-bh2z6&ms=au%2Crdu&mv=m&mvi=4&pl=20&initcwndbps=1052500&bui=AQmm2ex2IXidTgwyvWtsM_CrZkGVByxMo7IriCQP-5APQ-GW4abJfkRnir7AlOD6KaJq_2VVLxVmyleW&spc=Mv1m9okpIWSz_AjYPygIqvXmteg8rGWCebza-ulQfML7QQxAj5T-BDI&vprv=1&svpuc=1&mime=video%2Fmp4&ns=wazs-xVme_1GEMWmqjlTR2IQ&rqh=1&gir=yes&clen=99175928&ratebypass=yes&dur=1990.368&lmt=1725200808065459&mt=1725366808&fvip=5&c=WEB_CREATOR&sefc=1&txp=5538434&n=3PlWQUxCU8MQVQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhAJ8d4i4AoLQa0qB_vyKo_TMgdGUTZwaxSyl-CLJEMTolAiBumHuLz4IqQ8kMuHGPcq0dDhhIMaxmDGxpDUYmwVF13Q%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRAIgP49b3EL8FS2Q5Aiwinn4OrPR7jK8LLmWxp08_PzrnEcCIA00zeI7hbIrE7irgaGMYdsHau2dgAzqf8jzUQ2bV7qP&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9', this)">
+        </li>
+        
+        <li class="episode-item">
+            <button class="episode-button" onclick="playEpisode('https://rr1---sn-h5q7knel.googlevideo.com/videoplayback?expire=1725412449&ei=AWDXZoqHM_-cp-oProSq6AQ&ip=185.194.59.100&id=o-AB55Xz24OcJc_VhMBhyvQIizhF_jN_MoKTSGDHGgUg84&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=zW&mm=31%2C26&mn=sn-h5q7knel%2Csn-4g5lzne6&ms=au%2Conr&mv=m&mvi=1&pl=24&initcwndbps=1407500&bui=AQmm2ew7Ix4jG8eHRQvldjmwp4dwOkMYb_36QkkA9LMLzL-y5ecLLydXH75RPkzbozmsKzfOzF-4N2wQ&spc=Mv1m9mAl5dJrws6zjn8UvH3qIHFY-zSkA77jrcux2DuMkeU5pkMg77E&vprv=1&svpuc=1&mime=video%2Fmp4&ns=W21USxboDxRPuc0goATGhYIQ&rqh=1&gir=yes&clen=105602304&ratebypass=yes&dur=2211.840&lmt=1725235057275935&mt=1725390575&fvip=1&c=WEB_CREATOR&sefc=1&txp=5538434&n=9N2EH79xBpCtiA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRgIhANqPKs3YNJSzS4LdFkRxGKVv4HS7Wfoi4OvSGeQ9GKUFAiEAmemswKefAX7EHt3gFfkkhOVIKDvhKxO5Qstwv0TtH0U%3D&sig=AJfQdSswRAIgFjA34w5Ru0nhFrW-5ZyCc7e0A7xufpiqmMSyOWANl0wCIHOg3hPYFnkjoLr6hE1QXqvuHhHi9DqUy8jH5buMma6r&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9%203', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 3
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
-                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    <source id="videoSource1" src="" type="video/mp4">
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
+                <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
-      </li>
-      <li class="episode-item">
+        </li>
+        
+        <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr7---sn-cnoa-h55z.googlevideo.com/videoplayback?expire=1725406726&ei=pknXZpPUCozPjuMP3vCG2AE&ip=2001%3A4490%3A4eb1%3A769a%3Aecbf%3Ae0%3A9c0a%3A3cc1&id=o-ANAZLtz-jRL0ZiKt6HI8MV4ZNNAv-jSdwcAZhov76Of5&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=Jl&mm=31%2C26&mn=sn-cnoa-h55z%2Csn-cvh76nle&ms=au%2Conr&mv=m&mvi=7&pl=48&initcwndbps=1472500&bui=AQmm2ewh3EBOh9o4_9X0KBRDCNr9_SXN6coQCj6EsZ84-IFNSGkXm9mYbrNzld-o9Ss6FJuOVl9UvXng&spc=Mv1m9mNVyWDFXxPSlMw5JpEWSdwe1emLNmp5WWGWc5BQ6qB2wdy8MwY&vprv=1&svpuc=1&mime=video%2Fmp4&ns=Dp2RkGT_Gd4BTrmAJuR7EegQ&rqh=1&gir=yes&clen=92366125&ratebypass=yes&dur=1771.403&lmt=1725234830984271&mt=1725384805&fvip=3&c=WEB_CREATOR&sefc=1&txp=5438434&n=uXFkSXEkS0wdmw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRgIhAN2OukFnV06RRmJECgx7yiV5L8cuuFV87izCmwaKdjGNAiEA4K2ayey5fJQN2xJxn4evb_Sg1ssjMNU3eH5KNDVv-Dc%3D&sig=AJfQdSswRQIhANNE3d2R3p-6TdEPYiBsRJa1oShkyq6sdw-JhBDbUvrvAiBuVX5kbNFuBBevpyRnTcJxtkCgInXApkDuaR10E1-7Eg%3D%3D&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%B1%D8%A7%D8%A8%D8%B9%D8%A9', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 4
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
-                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    <source id="videoSource1" src="" type="video/mp4">
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
+                <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
-      </li>
-      <li class="episode-item">
+        </li>
+        
+        <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr2---sn-gwpa-a3vk.googlevideo.com/videoplayback?expire=1725406770&ei=0knXZur_J6TkrtoPj4TxiAc&ip=2405%3A201%3A6008%3A614c%3A7570%3A7fcb%3Aae5e%3A81c2&id=o-AHXsjmT4iUM9EjqO2S4BIlBOzjGVFppfFsDraGJxLjVd&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=Y-&mm=31%2C29&mn=sn-gwpa-a3vk%2Csn-gwpa-qxay&ms=au%2Crdu&mv=m&mvi=2&pl=45&initcwndbps=365000&bui=AQmm2eyaLBReZ1bYE-lZJY0ES9dmFcE1XykIxaZTsmVOJgUoQa_FPO77N5_XVgdfjUf-TsHUC-mYXXnr&spc=Mv1m9gAHbQl7qv53kUE1Pn-zYnz--fz4h6rSCM1uF5uQbBHc88Q2gXg&vprv=1&svpuc=1&mime=video%2Fmp4&ns=Y3TFqiz6MpFFQnCJv7H2wBYQ&rqh=1&gir=yes&clen=95327816&ratebypass=yes&dur=2080.461&lmt=1725156912456186&mt=1725384805&fvip=8&c=WEB_CREATOR&sefc=1&txp=5538434&n=TnWB6Hxz5hkORQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgGRRMPPV72GLT34iiA2S7gvRcj3I914viRlsWfebiaMsCIQCcHT2PGClvVxA4Lw7HC3vtlCQm1nSypLGBhPZjKCEdMg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRQIgJroSsnczuE54VdMTp9aC4rgtqjdFds9wy8KwnKjsITYCIQCg0iAjnKbhojlNY7PkB9u_tIoxGPRsr9RN3466LPY4Bg%3D%3D&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%205', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 5
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
-                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    <source id="videoSource1" src="" type="video/mp4">
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
+                <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
-      </li>
-      <li class="episode-item">
+        </li>
+        
+        <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr1---sn-oxvjvh-2oil.googlevideo.com/videoplayback?expire=1725406862&ei=LkrXZprSOaKV4t4Pk4WBwAQ&ip=163.53.198.133&id=o-ABndvm_mEUlslTAPsDndSdIDjC2NVuM-7eShwpOmXnRn&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=sw&mm=31%2C29&mn=sn-oxvjvh-2oil%2Csn-npoe7nz7&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=902500&bui=AQmm2eyhsk4TubsflgpbZ7lVCYZBLGeIdvt6wazVGFLrj3ePr6q1pXKWCHgoBvwrnh_S0KXDi8Cmm_BS&spc=Mv1m9kSzUydj-oTwM8VFotZYPnGA8gt_JR27352mtYTfUhTd4yCWPvg&vprv=1&svpuc=1&mime=video%2Fmp4&ns=bgGqDdJV964gGmXttHkV7UgQ&rqh=1&gir=yes&clen=68073719&ratebypass=yes&dur=1470.635&lmt=1725219505392763&mt=1725384805&fvip=5&c=WEB_CREATOR&sefc=1&txp=5438434&n=LMj2vAKjKU2XKQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRgIhAJQeO7uqKw_Ja_Zj5gRreRs10uWqfZukEITu9FgL356GAiEA0E5-VDnI0vIrpUSUwnwfp-3Y5_ZD85pSfbfHv8DezAk%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRQIhAO8PyGn-BziSsk4s4ZnJBEvq8Yo-uXldOdpiNevLKBWLAiBmefigVnDM1zwAjSkcIwo3-LMSCs884N-r8UMrSF1j4A%3D%3D&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%20%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%206', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 6
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
-                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    <source id="videoSource1" src="" type="video/mp4">
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
+                <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
-      </li>
-      <li class="episode-item">
+        </li>
+        
+        <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr2---sn-5abxgpxuxaxjvh-5abe7.googlevideo.com/videoplayback?expire=1725406893&ei=TUrXZvbtCKOAp-oP9YiC0A4&ip=105.99.134.190&id=o-AHWIDPTpRnhSTAKpC4C1xJ6uIzIhy2hEQmst8mYmyCi-&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=-D&mm=31%2C29&mn=sn-5abxgpxuxaxjvh-5abe7%2Csn-hgn7rn7y&ms=au%2Crdu&mv=m&mvi=2&pl=20&initcwndbps=625000&bui=AQmm2ewLQbqcQ6XhxMknzWpYB_JkUlxl43EVxPVzWVfl_kzBgAb8SrUUapIheBB-LpANHaqZyEHDrF-r&spc=Mv1m9tNZFA83P4YBZRTaSPrTcXcKBBnHBByjdoQqv2lMICKmlKrGBC7tRn2vk-A&vprv=1&svpuc=1&mime=video%2Fmp4&ns=T2n4VqIXdeVsE67hqLvOZeAQ&rqh=1&gir=yes&clen=110038258&ratebypass=yes&dur=2901.658&lmt=1725241257015366&mt=1725384805&fvip=4&c=WEB&sefc=1&txp=5438434&n=16ty7cXFD54Dkw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRgIhAIGmpMJ9qpZ1zWBV2zmrUvrvtpHUAAUzptVYij0T5jQRAiEA2CWrkf2SPVZg244fFxLUuaTd74y6xou9AZ34udPRCs4%3D&sig=AJfQdSswRQIgdODZv964FwH4T_ylhaK8WQcMHW5nR4t9sgTKRBx0uO4CIQDwAjVoUIk8JWf6ilLxwnRGBmCDp6C9S7PAx17gHcY4FQ%3D%3D&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%20%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%207', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 7
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
-                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    <source id="videoSource1" src="" type="video/mp4">
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
+                <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
-      </li>
-      <li class="episode-item">
+        </li>
+        
+        <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr4---sn-15po3n5-qhhs.googlevideo.com/videoplayback?expire=1725406923&ei=a0rXZq-WBZObhcIPm_TAsA0&ip=2a02%3Acb80%3A410b%3Aaf14%3A1c19%3A26f5%3Af08a%3Acd7d&id=o-AI5dnvgtVBtc5TRuybFXhn7v97WwkSBf29-L75eoiWDf&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=jT&mm=31%2C29&mn=sn-15po3n5-qhhs%2Csn-hgn7rnll&ms=au%2Crdu&mv=m&mvi=4&pcm2cms=yes&pl=48&initcwndbps=556250&bui=AQmm2ewi8Ffk-CKWOmZFT-mhjibzNROZjGOqKysKLkKIEggJkebi-ogky-6CKQrVzyI4my3XQTeyoQAO&spc=Mv1m9j_SM6jRTMBhCPJGdvsu5jiETC3TkRcir5GZ4TW_jzGURHYszp6KMaYXKRA&vprv=1&svpuc=1&mime=video%2Fmp4&ns=E4cvVJDVdUCQz3qiySC2lHoQ&rqh=1&gir=yes&clen=108676869&ratebypass=yes&dur=3041.744&lmt=1725219717962239&mt=1725384805&fvip=2&c=WEB&sefc=1&txp=5438434&n=fcLJRqWh4dABBQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRQIhAMqUDeypJSFMwc84Oe7YQNXd-xdFuHZp2lNCccLqq_B4AiBH7_PlHfCOfHUvz9mQS6I87aQXtRBrzqWkwEVW9z55pw%3D%3D&sig=AJfQdSswRgIhAKaYo89fFqMFpZPlytKMRRUpgUMpUOTPo-MVU1pbCrBCAiEAyqGQPbkHIkkN2Xa4Nk0LnAQp3jWmQNFnj4DlEWpOyEE%3D&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%208', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 8
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
-                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    <source id="videoSource1" src="" type="video/mp4">
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
+                <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
-      </li>
-      <li class="episode-item">
+        </li>
+        
+        <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr3---sn-15po3n5-qhhs.googlevideo.com/videoplayback?expire=1725406951&ei=h0rXZoWXM9eWhcIPk6nPsA0&ip=2a02%3Acb80%3A410b%3Aaf14%3A1c19%3A26f5%3Af08a%3Acd7d&id=o-ADjtT9D3xbYu1OaX2R_QJiPqHD3over7VcLWmjiqpXkY&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=Xt&mm=31%2C29&mn=sn-15po3n5-qhhs%2Csn-hgn7rne7&ms=au%2Crdu&mv=m&mvi=3&pl=48&initcwndbps=550000&bui=AQmm2ewE-sJI1CGZK_hx-ss2aqEof3CVy2J_VzCG5ClUQy3Bm6a9jBegjQEIUvQTBxh2KsH81lhH5u7Y&spc=Mv1m9htLjReFP1qUYnu03c7L4pS29MfEIbvhhKHTDALvG_EhMQR0hkg&vprv=1&svpuc=1&mime=video%2Fmp4&ns=Q6GaCuN798ycYhoE-8Pdfp8Q&rqh=1&gir=yes&clen=73315906&ratebypass=yes&dur=2030.468&lmt=1725225414275960&mt=1725385044&fvip=4&c=WEB_CREATOR&sefc=1&txp=5438434&n=eR6dQou5SMBG8w&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgE9rDrSmsmy-05GzSCIqj9c975Y-Fv0vEBlxTAlIoh-wCIQCjpKxNA9GilUeHTSsbcUr_ZZtirLWfAuxfC9ypoAz9Yw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRgIhALCwHnsk-knKeo_-bEFJyGhTqCjpRBej9pmo1tIMUVAnAiEAgC48_GU3ey9EzMnd-SOq3jVVlJ5HIsh-QqKEjGU93GM%3D&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%209', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 9
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
-                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    <source id="videoSource1" src="" type="video/mp4">
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
+                <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
-      </li>
-      <li class="episode-item">
+        </li>
+        
+        <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr1---sn-3xg5a5-jjws.googlevideo.com/videoplayback?expire=1725406976&ei=oErXZsfHB4Hg9fwPj5KeyAk&ip=103.147.208.108&id=o-ANSUt-BcLeN7OsTqIvN65r40eKEILx5eQPJKaavSz1Oh&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=qW&mm=31%2C29&mn=sn-3xg5a5-jjws%2Csn-h557sn6z&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1230000&bui=AQmm2exfZzyQCBu_CJdlvo3q4BOImKi32kKO6Kc7G6ErDz7pZQwsRmy0pmznlxwqroIuGmijG0sZ6PNc&spc=Mv1m9pLI2NPPkzFb3ej0BF_3VvlkT-9ryM9G5ExqRpSYROYRi6IxVyM&vprv=1&svpuc=1&mime=video%2Fmp4&ns=6B2FLp3W-3YlFKlFdElhZGMQ&rqh=1&gir=yes&clen=144310729&ratebypass=yes&dur=3361.320&lmt=1725225075251373&mt=1725385044&fvip=1&c=WEB_CREATOR&sefc=1&txp=5438434&n=cj8b2wd_WuHF4w&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRQIhAJG-ElTb8E5sxK-EdmzEKh9yAvgMiy2KpGqcnolTRPK5AiBoz5CliHl-0xc6lqach50kpEfL6XuFLSldmzkNcAzf9Q%3D%3D&sig=AJfQdSswRQIgOEDONQlMDQkAMVgh9ShoeKNT4kV-WclDqNiLnu84lPQCIQCUf0bm64-0Dpp9k4kSmAxw7z9Mvd4gOKTgkaSxaWyMsw%3D%3D&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%20%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%2010', this)">
-                <i class="fas fa-play-circle"></i> الحلقه 10
+                <i class="fas fa-play-circle"></i> الحلقة 10
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
-                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    <source id="videoSource1" src="" type="video/mp4">
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
+                <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
-      </li>
-      <li class="episode-item">
+        </li>
+        
+        <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr3---sn-p5h-jhoy.googlevideo.com/videoplayback?expire=1725394219&ei=yhjXZs_gPOeBp-oPrejHyQ4&ip=41.250.105.58&id=o-ALtNA3vQV6VqLZweCxh2f-ykTKrRf9ljcWkfK7V4ipNH&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=83&mm=31%2C29&mn=sn-p5h-jhoy%2Csn-apn7en7s&ms=au%2Crdu&mv=m&mvi=3&pl=21&initcwndbps=646250&bui=AQmm2exapVqyEVaQ9jihJODcrrC5XD-r0I2NqEsTz_ttnPEm_QI7oaAy4vlKBlbsV8dQ8_nU_lU_maYd&spc=Mv1m9vIvsRltIgJkJI-NtqPd6UkcIcv1VkFxT7ZmZUeZnFPm0MyV1puMaBpe27Y&vprv=1&svpuc=1&mime=video%2Fmp4&ns=IibdWzKfIybCcZcwYR6elcQQ&rqh=1&gir=yes&clen=107056541&ratebypass=yes&dur=2223.984&lmt=1725181630099080&mt=1725372326&fvip=4&c=WEB&sefc=1&txp=5438434&n=5oWIGunoTxOwNg&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRQIgWRgMBG5u6xf-In55tG2Qwc2q32P3BQ2x8Ow2meDHXkgCIQDSSCcjU30cxqPb0iKvOjOb7usen0m7Vsk7vWdas3HFlg%3D%3D&sig=AJfQdSswRQIgUzSXFRckA9ta2cgLxKdd1O8g_lcG-qP17R3ZQYESq2kCIQCRXBYxagjHTyPyHIjghZuTeGVvGwtby37pMuXH67AoXA%3D%3D&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%2F%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%20%D8%A7%D9%84%D8%AD%D8%A7%D8%AF%D9%8A%D8%A9%20%D8%B9%D8%B4%D8%B1%2011%20%D9%83%D8%A7%D9%85%D9%84%D8%A9', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 11
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
-                    <source id="videoSource1" src="" type="application/x-mpegURL">
+                    <source id="videoSource1" src="" type="video/mp4">
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
+                <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
-      </li>
+        </li>
+        
     </ul>
     &copy; 2024 حقوق الطبع والنشر جميع الحقوق محفوظة لمطور الموقع 
-</div>
     <script>
         let currentVideoPlayer = null;
 
