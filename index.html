@@ -139,6 +139,20 @@
         .light-mode .theme-toggle {
             color: #000;
         }
+
+              .centered-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vh; /* لجعل العنصر في منتصف الشاشة عموديًا */
+    background-color: #; /* لون الخلفية، يمكنك تغييره حسب التصميم */
+}
+
+.centered-number span {
+    font-size: 14px; /* حجم الخط */
+    font-weight: bold;
+    color: #333; /* لون الخط، يمكنك تغييره حسب التصميم */
+}
     </style>
 </head>
 <body class="dark-mode">
@@ -296,6 +310,8 @@
         
     </ul>
     &copy; 2024 حقوق الطبع والنشر جميع الحقوق محفوظة لمطور الموقع 
+    <div class="centered-number">
+    <span>عدد مستخدمين الموقع الان : 1478</span>
     <script>
         let currentVideoPlayer = null;
 
