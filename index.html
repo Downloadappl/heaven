@@ -162,7 +162,7 @@ img {
         html {
     touch-action: pan-x pan-y; /* يمنع التكبير والتصغير باستخدام اللمس */
             
-        
+        }
     </style>
 </head>
 <body class="dark-mode">
@@ -372,6 +372,11 @@ img {
             var icon = document.querySelector('.theme-toggle i');
             icon.classList.toggle('fa-moon');
             icon.classList.toggle('fa-sun');
+        }
+
+        document.addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // منع قائمة السياق عند الضغط الطويل أو بالنقر الأيمن على أي عنصر
+  });
         }
     </script>
 </body>
