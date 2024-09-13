@@ -6,152 +6,197 @@
     <title>مسلسل الجنة والنار | series Al-Jannah wal-Nar </title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #121212;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 20px;
-            color: #fff;
-            direction: rtl;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        h1 {
-            color: #eaeaea;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-        }
-
-        .episode-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-        }
-
-        .episode-item {
-            width: 90%;
-            max-width: 500px;
-            margin: 10px 0;
-        }
-
-        .episode-button {
-            width: 100%;
-            padding: 20px;
-            font-size: 24px;
-            color: #fff;
-            background-color: #333;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .episode-button:hover {
-            background-color: #555;
-            transform: translateY(-4px);
-        }
-
-        .episode-button i {
-            margin-left: 10px;
-        }
-
-        .video-container {
-            display: none; /* إخفاء مشغل الفيديو في البداية */
-            margin-top: 20px;
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
-            position: relative;
-        }
-
-        video {
-            width: 100%;
-            height: auto;
-            border: 2px solid #333;
-            border-radius: 8px;
-        }
-
-        .video-container img.watermark {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 100px; /* ضبط العرض حسب الحجم المناسب */
-            height: auto;
-            opacity: 0.8;
-            z-index: 10;
-        }
-
-        .theme-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            font-size: 24px;
-            color: #fff;
-            transition: color 0.3s;
-        }
-
-        .theme-toggle.light {
-            color: #000;
-        }
-
-        .dark-mode {
-            background-color: #121212;
-            color: #fff;
-        }
-
-        .dark-mode .episode-button {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .dark-mode .episode-button:hover {
-            background-color: #555;
-        }
-
-        .dark-mode .theme-toggle {
-            color: #fff;
-        }
-
-        .light-mode {
-            background-color: #fff;
-            color: #000;
-        }
-
-        .light-mode .episode-button {
-            background-color: #ddd;
-            color: #000;
-        }
-
-        .light-mode .episode-button:hover {
-            background-color: #bbb;
-        }
-
-        .light-mode .theme-toggle {
-            color: #000;
-        }
-
-              .centered-number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3vh; /* لجعل العنصر في منتصف الشاشة عموديًا */
-    background-color: #; /* لون الخلفية، يمكنك تغييره حسب التصميم */
+/* إعدادات عامة */
+body {
+    background-color: #1e1e2f;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    direction: rtl;
+    overflow-x: hidden;
+    margin: 0;
 }
 
-.centered-number span {
-    font-size: 14px; /* حجم الخط */
+h1 {
+    color: #f5a623;
+    font-size: 3.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.05);
+}
+
+/* ترتيب الأزرار وتصميمها */
+.episode-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.episode-item {
+    width: 300px;
+    margin: 0;
+}
+
+.episode-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 22px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.episode-button:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.episode-button i {
+    margin-left: 10px;
+}
+
+.episode-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: top 0.5s ease;
+}
+
+.episode-button:hover::before {
+    top: 150%;
+}
+
+/* تأثيرات الفيديو */
+.video-container {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border: 2px solid #555;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.video-container img.watermark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+/* تأثيرات على تغيير الثيم */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: rotate(45deg);
+}
+
+.light-mode {
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+.light-mode .episode-button {
+    background-color: #ddd;
+    color: #000;
+}
+
+.light-mode .episode-button:hover {
+    background-color: #aaa;
+}
+
+.light-mode .theme-toggle {
+    color: #000;
+}
+
+/* الرسائل الترحيبية */
+.welcome-message {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #ff9800;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* إعدادات الخطوط والصور */
+img {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* تحريك النص */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* منع تكبير الصفحة */
+html, body {
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    zoom: reset;
+}
+
+/* تحسين تصميم الحاوية النصية */
+.centered-number {
+    font-size: 18px;
     font-weight: bold;
-    color: #333; /* لون الخط، يمكنك تغييره حسب التصميم */
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
         /* CSS لمنع السحب */
@@ -170,7 +215,7 @@ img {
         <i class="fas fa-moon"></i>
     </div>
     <h1>مسلسل الجنة والنار</h1>
-    <div class="welcome-message" style="font-size: 1.2em; margin-bottom: 20px;">شاهد مسلسل الجنة والنار مجان على موقعنا الالكترونيا</div>
+    <div class="welcome-message" style="font-size: 1.2em; margin-bottom: 20px;">شاهد مسلسل الجنة والنار مجانا على موقعنا الالكتروني</div>
     <ul class="episode-list">
         <img src="https://media.infoplusnetwork.com/archive/image/2024/8/26/55b9212a-e8b9-419b-b972-3480dc6eaafe.jpg" alt="وصف الصورة" style="width: 250px; height: auto;">
         <span style="font-size: 1.0em;">الجنة والنار مسلسل اجتماعي درامي واقعي تدور أحداثهُ داخل ذي قار، وتتمحور قصتهُ حول الصراع بين البشر والشياطين، بين الخير والشر، ويجسد العم فرج دور الشيطان وهو صاحب قدرات خيالية يعود إلى المنطقة بعد سبعة أيام من وفاة أخيه الذي طرده قبل عشرين عاماً.</span>
@@ -330,6 +375,7 @@ img {
                     المتصفح الخاص بك لا يدعم تشغيل الفيديو.
                 </video>
                 <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
+                
             </div>
         </li>     
                 
@@ -373,11 +419,10 @@ img {
             icon.classList.toggle('fa-moon');
             icon.classList.toggle('fa-sun');
         }
-
+        
         document.addEventListener('contextmenu', function(e) {
     e.preventDefault(); // منع قائمة السياق عند الضغط الطويل أو بالنقر الأيمن على أي عنصر
   });
-        
     </script>
 </body>
 </html>
