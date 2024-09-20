@@ -33,6 +33,65 @@ body {
     margin: 0;
 }
 
+        h1 {
+            color: #f5a623;
+            font-size: 3.5em;
+            margin-bottom: 40px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .overlay-content {
+            background-color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .overlay h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .overlay a {
+            display: inline-block;
+            background-color: #ff5722;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .overlay a:hover {
+            background-color: #e64a19;
+        }
+
+        .overlay button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .overlay button:hover {
+            background-color: #555;
+        }
+        
 body {
     font-family: 'Harmattan', sans-serif;
 }
@@ -122,7 +181,7 @@ h1:hover {
 video {
     width: 100%;
     height: auto;
-    border: 2px solid #555;
+    border: 2px solid #708;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
@@ -248,23 +307,30 @@ img {
             list-style: none;
         }
         
-        .video-container {
-    position: relative; /* للسماح بوضع العلامة المائية */
-    margin-top: 20px;
+        /* الطبقة التي تغطي المحتوى */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 800px;
-    text-align: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: auto; /* السماح بالتفاعل مع النافذة المنبثقة */
 }
 
-video {
-    width: 100%;
-    height: auto;
-    border: 2px solid #289;
-    border-radius: 20px;
-    box-shadow: 0 58px 150px rgba(0, 0, 0, 0.4);
+/* منع التفاعل مع كل شيء خلف النافذة */
+body.blocked {
+    pointer-events: none; /* منع كل التفاعلات */
 }
 
-
+/* السماح بالتفاعل مع النافذة المنبثقة فقط */
+body.blocked .overlay {
+    pointer-events: auto; /* السماح بالتفاعل مع نافذة الاشتراك */
+}
     </style>
 </head>
 <body class="dark-mode">
@@ -512,7 +578,7 @@ video {
 
                                                                                                                                     <ul class="season-episodes">
         <li class="episode-item">
-            <button class="episode-button" onclick="playEpisode('https://rr2---sn-4g5e6ns6.googlevideo.com/videoplayback?expire=1726799912&ei=yIvsZsGTG5r11sQP0-HMsQU&ip=2804%3Ad41%3Ae621%3A2300%3A7956%3A7923%3A47f3%3Abb7d&id=o-AEtmhlwDPDrIdmxiFFn3zOxiACRIHAF7QCZWa4Q_9E0R&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&pcm2=yes&bui=AXLXGFTRD5h1OqheZX50YB5DqVfEmIqygyR7z-GnCmhw77CEP6MycPUHMksDG8_tEjDRn4rtm2d9hEDC&spc=54MbxQa_iy2TI-Jo34voGlIvKxq4nUy6Vs18wGEG1iE9iUmMRGF4SF8&vprv=1&svpuc=1&mime=video%2Fmp4&ns=yqqE8iBAJtcgevfAZ45tRsIQ&rqh=1&gir=yes&clen=115120664&ratebypass=yes&dur=2596.107&lmt=1726777225011320&c=WEB_CREATOR&sefc=1&txp=6309224&n=2pPEIHLdnQVBdw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cpcm2%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRgIhALpJoRsmjVV8u6o8LJtm4L2QAm0GC2OZULwWp63TWI7VAiEAoi_DyzMkgBuR6pd1M1MWnFwjmURaA3Ib0t7EQY8BDbc%3D&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84+%D8%AC%D9%86%D9%87+%D9%88%D9%86%D8%A7%D8%B1+%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85+%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A+%7C+%D8%AD%D9%84%D9%82%D9%87+18+%D9%83%D8%A7%D9%85%D9%84%D8%A9&rm=sn-uxaxh5g-bpbk7s,sn-gpvl77e&rrc=79,104,80&fexp=24350517,24350556,24350561&req_id=e22a75f7f834a3ee&ipbypass=yes&redirect_counter=3&cm2rm=sn-p5qe7d76&cms_redirect=yes&cmsv=e&mh=Zp&mip=38.9.108.171&mm=34&mn=sn-4g5e6ns6&ms=ltu&mt=1726778197&mv=m&mvi=2&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=ABPmVW0wRQIgT5Yd0p_LvAr__8ZqkQDdwWHn0m5gMT7JCdJqQwi4WzMCIQCUQ0EkN7p4l-01KMXEzTBTcgSeOeiGivWgq9ax0fQ-qA%3D%3D', this)">
+            <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/nano-de277.appspot.com/o/Mn%2FJn-0207.mp4?alt=media&token=11739b69-768a-46e6-9071-4826a2c17a8b', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 7
             </button>
             <div class="video-container" id="videoContainer1">
@@ -525,7 +591,7 @@ video {
         </li>
                                <ul class="season-episodes">
         <li class="episode-item">
-            <button class="episode-button" onclick="playEpisode('https://rr2---sn-x5guiapo3uxax-cbfy.googlevideo.com/videoplayback?expire=1726866441&ei=qY_tZrvlEa2svdIP85_s4Q8&ip=91.234.57.250&id=o-AKwwLloQkmsDjhQ7ybKvQxZrlmMIn5ypMfj2dwY9hnmO&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AXLXGFTSTtRLR14hsm3U5nYxnodDYUAKeyIjRdmrwBzsrZYA6Bossi_npyoFeD2ukI6LTI3H3z2xma_P&spc=54MbxeG66T3w4QNJmc10VkkHWeaqtQ_rRgTa-d8Cjgi1tSqURjpZ&vprv=1&svpuc=1&mime=video%2Fmp4&ns=1Mn6Q6EQpJEKWO3dUWKiYkcQ&rqh=1&gir=yes&clen=3941951&ratebypass=yes&dur=64.342&lmt=1726831162912674&fexp=24350518,24350557,24350561,51299151&c=WEB&sefc=1&txp=6209224&n=SmjSfqHGYW9XgQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgccwQPp3_YgsaXTp7G7H9ZVbjYRMuWytiHFhgtxKmpPUCIQCsWKKdR5YwEu59gR4Ibany-z_pXCs_K_xu5aCIfSEqZA%3D%3D&redirect_counter=1&rm=sn-4g5ek67e&rrc=104&req_id=5e663a5d5114a3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=lq&mip=38.9.108.170&mm=31&mn=sn-x5guiapo3uxax-cbfy&ms=au&mt=1726848552&mv=m&mvi=2&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=ABPmVW0wRQIgNJZH3DPlgYPMNwjaaviSA-HqwDkLp54SubCiVLA9wscCIQCJj1csUSzj9oKu54ZlpzqrFRAP7wJ3z5zm_zcokE9MiA%3D%3D', this)">
+            <button class="episode-button" onclick="playEpisode('https://rr5---sn-nv47lnsr.googlevideo.com/videoplayback?expire=1726881560&ei=uMrtZqDtMLeDi9oPjdCduAM&ip=78.178.75.59&id=o-AH7B5j0q7pRlN4-9fZTc380u0tLqf39SBgDEILBS-Msv&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AXLXGFQqsH4vDa599h1by0bppJaaTihU-jc2VWjHR6GLJuGQBAYNqqx6uUwfinJTFyGWW_WOl7mhRKrA&spc=54MbxanQRbjgFdCbRR2BEOSevyLya9gF7GiKCCiFr_H5VcUo4hvxg04&vprv=1&svpuc=1&mime=video%2Fmp4&ns=ArcbOM1y1QrOWivc5PjuN0UQ&rqh=1&gir=yes&clen=100005062&ratebypass=yes&dur=2522.453&lmt=1726858435023223&c=WEB_CREATOR&sefc=1&txp=6309224&n=xguOLixnVYxd3g&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRAIgb5hvI62KFfculJO2-FS21HuZ_cQEOMrPDixC-JgBI6QCIElHrJ7_tjITuN7eBni8o526fiK36Q5APtaL_GBiloOb&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84+%D8%A7%D9%84%D8%AC%D9%86%D8%A9+%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1+%7C+%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85+%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A+%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9+19&rm=sn-u0g3uxax3-qpte7l,sn-nv4sy76&rrc=79,104&fexp=24350518,24350556,24350561&req_id=1e93331e1212a3ee&met=1726859969,&rms=rdu,rdu&redirect_counter=2&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=d5&mip=38.9.108.168&mm=29&mn=sn-nv47lnsr&ms=rdu&mt=1726859823&mv=m&mvi=5&pl=24&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=ABPmVW0wRAIgC1TW7UncxCnC81IEnJBpfznbS7fVeDdh_LvYaNN4sMUCIBEn599YEkjkDBK7FItK5u2rbL-Hiyui3kx6UW5U2AaW', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 8
             </button>
             <div class="video-container" id="videoContainer1">
@@ -537,7 +603,7 @@ video {
             </div>
         </li>
 
-                            <li class="episode-item">
+                                           <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://dso6.raed.net:447/files/%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%AC%D8%AF%D9%8A%D8%AF-35-[BF53298].mp4', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 9
             </button>
@@ -548,8 +614,8 @@ video {
                 </video>
                 <img src="https://k.top4top.io/p_3168zh6by4.png" alt="موفي تايم" class="watermark">
             </div>
-        </li>
-
+                                           </li>
+                                                                                                                                        
                                                                                                                                         
         <!-- أضف الحلقات الأخرى للموسم الثاني بنفس الطريقة -->
     </ul>
@@ -557,6 +623,16 @@ video {
     
     <div class="centered-number">
         <span>&copy; 2024 حقوق النشر محفوظة لمطورين الموقع </span>
+    </div>
+    
+        <!-- النافذة المنبثقة للاشتراك -->
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <h2>يجب عليك الاشتراك في قناتنا على التلغرام للوصول إلى الموقع</h2>
+            <a href="https://t.me/jeibw2" target="_blank">اضغط هنا للاشتراك</a>
+            <br>
+            <button onclick="closeOverlay()">لقد اشتركت</button>
+        </div>
     </div>
     <script>
         let currentVideoPlayer = null;
@@ -598,6 +674,41 @@ video {
         document.addEventListener('contextmenu', function(e) {
     e.preventDefault(); // منع قائمة السياق عند الضغط الطويل أو بالنقر الأيمن على أي عنصر
   });
+  
+          function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        // تحقق إذا كان المستخدم قد أغلق النافذة المنبثقة
+        window.onload = function() {
+            if (localStorage.getItem('subscribed') === 'true') {
+                document.getElementById('overlay').style.display = 'none';
+            } else {
+                document.getElementById('overlay').style.display = 'flex';
+            }
+        }
+
+        function closeOverlay() {
+            // تفعيل عرض الموقع بعد الاشتراك
+            document.getElementById('overlay').style.display = 'none';
+            localStorage.setItem('subscribed', 'true'); // تخزين الاشتراك في التخزين المحلي
+        }
+        
+        window.onload = function() {
+    if (localStorage.getItem('subscribed') === 'true') {
+        document.getElementById('overlay').style.display = 'none';
+        document.body.classList.remove('blocked');
+    } else {
+        document.getElementById('overlay').style.display = 'flex';
+        document.body.classList.add('blocked');  // منع التفاعل مع المحتوى الخلفي
+    }
+}
+
+function closeOverlay() {
+    document.getElementById('overlay').style.display = 'none';
+    localStorage.setItem('subscribed', 'true');
+    document.body.classList.remove('blocked');  // السماح بالتفاعل مع المحتوى
+}
     </script>
 </body>
 </html>
