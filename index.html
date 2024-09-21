@@ -331,6 +331,138 @@ body.blocked {
 body.blocked .overlay {
     pointer-events: auto; /* السماح بالتفاعل مع نافذة الاشتراك */
 }
+
+/* إعدادات عامة */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #0d0d1f;
+    margin: 0;
+    padding: 0;
+}
+
+.story-section {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), #1e1e2f);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-section:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.story-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 150px;
+    height: 100%;
+    background: rgba(245, 166, 35, 0.3);
+    transform: skewX(-15deg);
+    animation: sliding-glow 4s infinite linear;
+}
+
+@keyframes sliding-glow {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.story-title {
+    font-size: 1.8em;
+    color: #f5a623;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.story-text {
+    color: #d1d1d1;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.category-section {
+    text-align: center;
+}
+
+.category-title {
+    color: #f5a623;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.category-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #f5a623;
+    border: 2px solid #f5a623;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-button:hover {
+    background-color: #f5a623;
+    color: #0d0d1f;
+    transform: scale(1.1);
+}
+
+.category-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+}
+
+.category-button:hover::before {
+    width: 0;
+    height: 0;
+}
+
+/* رسومات متحركة إضافية */
+.story-title::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background: #f5a623;
+    display: block;
+    margin: 10px auto;
+    animation: title-underline 1.5s ease infinite;
+}
+
+@keyframes title-underline {
+    0%, 100% {
+        width: 100px;
+    }
+    50% {
+        width: 70px;
+    }
+}
+
+
     </style>
 </head>
 <body class="dark-mode">
@@ -341,7 +473,17 @@ body.blocked .overlay {
     <div class="welcome-message" style="font-size: 1.2em; margin-bottom: 20px;">شاهد مسلسل الجنة والنار مجانا على موقعنا الالكتروني</div>
     <ul class="episode-list">
         <img src="https://media.infoplusnetwork.com/archive/image/2024/8/26/55b9212a-e8b9-419b-b972-3480dc6eaafe.jpg" alt="وصف الصورة" style="width: 250px; height: auto;">
-        <span style="font-size: 1.0em;">الجنة والنار مسلسل اجتماعي درامي واقعي تدور أحداثهُ داخل ذي قار، وتتمحور قصتهُ حول الصراع بين البشر والشياطين، بين الخير والشر، ويجسد العم فرج دور الشيطان وهو صاحب قدرات خيالية يعود إلى المنطقة بعد سبعة أيام من وفاة أخيه الذي طرده قبل عشرين عاماً.</span>
+<div class="story-section">
+    <h2 class="story-title">القصة</h2>
+    <p class="story-text">
+        مسلسل اجتماعي درامي واقعي تدور احداثه داخل ذي قار وتتمحور قصته حول الصراع بين الخير والشر.
+    </p>
+
+    <div class="category-section">
+        <h3 class="category-title">التصنيف</h3>
+        <span class="category-button">دراما</span> <!-- تعديل هنا من a إلى span -->
+    </div>
+</div>
         <!-- أزرار الحلقات -->
           
         <li class="episode-item">
