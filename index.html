@@ -10,7 +10,7 @@
     <meta property="og:title" content="مسلسلك مجانا">
     <meta property="og:description" content="اكتشف أحدث المسلسلات العربية والعالمية على موقع مسلسلك الآن من خلال موقعكم المجاني">
     <meta property="og:image" content="https://www.raed.net/img?id=1000393">
-    <meta property="og:url" content="https://fire-wine.vercel.app/">
+    <meta property="og:url" content="https://series-omega.vercel.app/">
     <meta property="og:type" content="website">
 
     <!-- بيانات إضافية -->
@@ -392,7 +392,7 @@ body {
 .story-title {
     font-size: 1.8em;
     color: #f5a623;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     text-align: center;
     position: relative;
     letter-spacing: 0px;
@@ -424,7 +424,7 @@ body {
     border: 2px solid #f5a623;
     font-weight: bold;
     text-transform: uppercase;
-    border-radius: 50px;
+    border-radius: 20px;
     transition: all 0.4s ease-in-out;
     position: relative;
     overflow: hidden;
@@ -479,7 +479,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 6px 20px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -507,8 +507,54 @@ header .theme-toggle:hover {
 body {
     padding-top: 70px; /* إزاحة المحتوى لأسفل بمقدار ارتفاع الهيدر */
 }
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 270px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#search {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.search-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.season-episodes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.episode-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.episode-item {
+    margin-bottom: 15px; /* المسافة بين الحلقات */
+}
+
+
     </style>
 </head>
+</ul>
+    </button>
+</div>
 <body class="dark-mode">
     <header>
         <a href="https://fire-wine.vercel.app/" target="_blank">
@@ -538,7 +584,7 @@ body {
           
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/jaraid.appspot.com/o/jna%2Fjna1.mp4?alt=media&token=01d101e4-a59b-4c0d-becc-095850dfcad0', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 1
+                <i class="fas fa-film"></i> الحلقة 1
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -551,7 +597,7 @@ body {
         <!-- أضف المزيد من الأزرار بنفس الطريقة -->
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/jaraid.appspot.com/o/jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D9%87%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D9%87%202%20%D9%83%D8%A7%D9%85%D9%84%D9%87%20%D8%AC%D9%88%D8%AF%D9%87%20%D8%B9%D8%A7%D9%84%D9%8A%D9%87.mp4?alt=media&token=fcc854db-c5cb-41d9-88c3-cc7085087449', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 2
+                <i class="fas fa-film"></i> الحلقة 2
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -564,7 +610,7 @@ body {
         
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/jaraid.appspot.com/o/jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D9%87%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D9%87%203%20%D9%83%D8%A7%D9%85%D9%84%D9%87%20%D8%AC%D9%88%D8%AF%D9%87%20%D8%B9%D8%A7%D9%84%D9%8A%D9%87.mp4?alt=media&token=9342cbdb-dc14-45d7-9773-74789cecbcce', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 3
+                <i class="fas fa-film"></i> الحلقة 3
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -577,7 +623,7 @@ body {
         
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/jaraid.appspot.com/o/jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D9%87%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D9%87%204%20%D9%83%D8%A7%D9%85%D9%84%D9%87%20%D8%AC%D9%88%D8%AF%D9%87%20%D8%B9%D8%A7%D9%84%D9%8A%D9%87.mp4?alt=media&token=c9064f22-cadd-4490-8e63-2121bf8184ae', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 4
+                <i class="fas fa-film"></i> الحلقة 4
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -590,7 +636,7 @@ body {
         
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/jaraid.appspot.com/o/jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D9%87%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D9%87%205%20%D9%83%D8%A7%D9%85%D9%84%D9%87%20%D8%AC%D9%88%D8%AF%D9%87%20%D8%B9%D8%A7%D9%84%D9%8A%D9%87.mp4?alt=media&token=91cca92c-f991-42f7-b6c8-e5e5bcb44e0f', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 5
+                <i class="fas fa-film"></i> الحلقة 5
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -603,7 +649,7 @@ body {
         
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/jaraid.appspot.com/o/jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D9%87%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D9%87%206%20%D9%83%D8%A7%D9%85%D9%84%D9%87%20%D8%AC%D9%88%D8%AF%D9%87%20%D8%B9%D8%A7%D9%84%D9%8A%D9%87.mp4?alt=media&token=640c47e7-7472-43b5-b302-3ff564c6c03c', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 6
+                <i class="fas fa-film"></i> الحلقة 6
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -616,7 +662,7 @@ body {
         
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/jaraid.appspot.com/o/jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D9%87%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D9%87%207%20%D9%83%D8%A7%D9%85%D9%84%D9%87%20%D8%AC%D9%88%D8%AF%D9%87%20%D8%B9%D8%A7%D9%84%D9%8A%D9%87.mp4?alt=media&token=367545be-90d5-445a-a08d-dbce57113b6a', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 7
+                <i class="fas fa-film"></i> الحلقة 7
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -629,7 +675,7 @@ body {
         
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/jaraid.appspot.com/o/jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D9%87%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D9%87%208%20%D9%83%D8%A7%D9%85%D9%84%D9%87%20%D8%AC%D9%88%D8%AF%D9%87%20%D8%B9%D8%A7%D9%84%D9%8A%D9%87.mp4?alt=media&token=e58f98c9-df57-4f70-8ab1-dbc806befde0', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 8
+                <i class="fas fa-film"></i> الحلقة 8
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -642,7 +688,7 @@ body {
         
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/jaraid.appspot.com/o/jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D9%87%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D9%87%209%20%D9%83%D8%A7%D9%85%D9%84%D9%87%20%D8%AC%D9%88%D8%AF%D9%87%20%D8%B9%D8%A7%D9%84%D9%8A%D9%87.mp4?alt=media&token=ba90e772-63de-4e74-b462-78b690e6c962', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 9
+                <i class="fas fa-film"></i> الحلقة 9
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -655,7 +701,7 @@ body {
         
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/jaraid.appspot.com/o/jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D9%87%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D9%87%2010%20%D9%83%D8%A7%D9%85%D9%84%D9%87%20%D8%AC%D9%88%D8%AF%D9%87%20%D8%B9%D8%A7%D9%84%D9%8A%D9%87.mp4?alt=media&token=9903b59c-cbb9-4112-ac89-ca91c9c20a49', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 10
+                <i class="fas fa-film"></i> الحلقة 10
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -668,7 +714,7 @@ body {
         
                 <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/jaraid.appspot.com/o/jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D9%87%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D9%87%2011%20%D8%A7%D9%84%D8%A7%D8%AE%D9%8A%D8%B1%D9%87%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85%20%D8%A7%D9%84%D8%A7%D9%88%D9%84%20%D9%83%D8%A7%D9%85%D9%84%D9%87%20%D8%AC%D9%88%D8%AF%D9%87%20%D8%B9%D8%A7%D9%84%D9%8A%D9%87.mp4?alt=media&token=11463f54-f790-4959-9a0d-537056a82fb4', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 11
+                <i class="fas fa-film"></i> الحلقة 11
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -687,7 +733,7 @@ body {
     <ul class="season-episodes">
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/neue-cbe0d.appspot.com/o/Jna%2FJna1.webm?alt=media&token=694e783b-1809-4f3b-a7ba-65cfbf141d5e', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 1
+                <i class="fas fa-film"></i> الحلقة 1
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -701,7 +747,7 @@ body {
             <ul class="season-episodes">
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/yiou-4c00c.appspot.com/o/Jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%202%20%20-%20%201080%20HD%20%5BBAkHioCW6BA%5D.webm?alt=media&token=dc8c4789-d80f-4010-bbac-61564ba45727', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 2
+                <i class="fas fa-film"></i> الحلقة 2
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -715,7 +761,7 @@ body {
                 <ul class="season-episodes">
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/yiou-4c00c.appspot.com/o/Jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20-%20(%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%203%20)%20%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%5B8XrT_dHSQX0%5D.webm?alt=media&token=8d5fcb2b-d38c-4545-9de8-26d0a11996b4', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 3
+                <i class="fas fa-film"></i> الحلقة 3
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -729,7 +775,7 @@ body {
                     <ul class="season-episodes">
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/yiou-4c00c.appspot.com/o/Jna%2F%D9%85%D8%B3%D9%84%D8%B3%D9%84%20%D8%A7%D9%84%D8%AC%D9%86%D8%A9%20%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1%20-%20(%20%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9%204%20)%20%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%20%5BGBBRJxQDvpc%5D.webm?alt=media&token=f40ba529-541d-4063-a05f-67b75c74aa8a', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 4
+                <i class="fas fa-film"></i> الحلقة 4
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -743,7 +789,7 @@ body {
                                             <ul class="season-episodes">
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/nano-de277.appspot.com/o/Mn%2FJ02-05.webm?alt=media&token=3046c032-8318-4e59-b67f-5ec4548aabcd', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 5
+                <i class="fas fa-film"></i> الحلقة 5
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -757,7 +803,7 @@ body {
                                                                 <ul class="season-episodes">
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/nano-de277.appspot.com/o/Mn%2FJ02-06.webm?alt=media&token=a6ac65ed-dfd9-4408-92fb-8fe4f9da7933', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 6
+                <i class="fas fa-film"></i> الحلقة 6
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -771,7 +817,7 @@ body {
                                                                                                                                     <ul class="season-episodes">
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://firebasestorage.googleapis.com/v0/b/nano-de277.appspot.com/o/Mn%2FJn-0207.mp4?alt=media&token=11739b69-768a-46e6-9071-4826a2c17a8b', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 7
+                <i class="fas fa-film"></i> الحلقة 7
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -785,7 +831,7 @@ body {
             <ul class="season-episodes">                                                                                                                            
         <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr5---sn-nv47lnsr.googlevideo.com/videoplayback?expire=1726881560&ei=uMrtZqDtMLeDi9oPjdCduAM&ip=78.178.75.59&id=o-AH7B5j0q7pRlN4-9fZTc380u0tLqf39SBgDEILBS-Msv&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AXLXGFQqsH4vDa599h1by0bppJaaTihU-jc2VWjHR6GLJuGQBAYNqqx6uUwfinJTFyGWW_WOl7mhRKrA&spc=54MbxanQRbjgFdCbRR2BEOSevyLya9gF7GiKCCiFr_H5VcUo4hvxg04&vprv=1&svpuc=1&mime=video%2Fmp4&ns=ArcbOM1y1QrOWivc5PjuN0UQ&rqh=1&gir=yes&clen=100005062&ratebypass=yes&dur=2522.453&lmt=1726858435023223&c=WEB_CREATOR&sefc=1&txp=6309224&n=xguOLixnVYxd3g&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRAIgb5hvI62KFfculJO2-FS21HuZ_cQEOMrPDixC-JgBI6QCIElHrJ7_tjITuN7eBni8o526fiK36Q5APtaL_GBiloOb&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84+%D8%A7%D9%84%D8%AC%D9%86%D8%A9+%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1+%7C+%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85+%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A+%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9+19&rm=sn-u0g3uxax3-qpte7l,sn-nv4sy76&rrc=79,104&fexp=24350518,24350556,24350561&req_id=1e93331e1212a3ee&met=1726859969,&rms=rdu,rdu&redirect_counter=2&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=d5&mip=38.9.108.168&mm=29&mn=sn-nv47lnsr&ms=rdu&mt=1726859823&mv=m&mvi=5&pl=24&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=ABPmVW0wRAIgC1TW7UncxCnC81IEnJBpfznbS7fVeDdh_LvYaNN4sMUCIBEn599YEkjkDBK7FItK5u2rbL-Hiyui3kx6UW5U2AaW', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 8
+                <i class="fas fa-film"></i> الحلقة 8
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -799,7 +845,7 @@ body {
                <ul class="season-episodes"> 
             <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://rr5---sn-4g5ednsl.googlevideo.com/videoplayback?expire=1726967218&ei=UhnvZqjCBJfui9oPmszH0Qs&ip=95.251.219.133&id=o-AMoPGJtvoZVK94mgGZcI4TnvDqdj0udr3GsCeAyMBvjP&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AXLXGFRiDfRb69kq9ixVsxGOp_0Fd407tyF2dJw5y0b9jnSZpxtggKDrJRDgxYxJflNRWxXnn8WzaqSD&spc=54MbxU_FoZoUk4wxT84cWAjpoYu9uTwDXt88RyxzldbCh5FUk4kQsk0&vprv=1&svpuc=1&mime=video%2Fmp4&ns=CeA2Si86oqwxJciF6PoNWQIQ&rqh=1&gir=yes&clen=111882097&ratebypass=yes&dur=2834.924&lmt=1726944001446422&c=WEB_CREATOR&sefc=1&txp=6209224&n=x3RTEV_WGI8Ytw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhAMrNcmzS_izCmZG1IzKYB22aHULOX1-EXlhgCO42mZ-vAiBP0vDo6NA6PmO8fHldjwXZeJzpsKoxqeyNo6unYwzlfQ%3D%3D&title=%D9%85%D8%B3%D9%84%D8%B3%D9%84+%D8%A7%D9%84%D8%AC%D9%86%D9%87+%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B1+%7C+%D8%A7%D9%84%D8%AD%D9%84%D9%82%D9%87+9+%7C+%D8%A7%D9%84%D8%AC%D8%B2%D8%A1+%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A&rm=sn-uxaxpu5ap5-apoe7e&rrc=79,80&fexp=24350517,24350556,24350561&req_id=88dbe29a42e4a3ee&redirect_counter=2&cm2rm=sn-hpa6y76&cms_redirect=yes&cmsv=e&mh=vQ&mip=38.9.108.175&mm=34&mn=sn-4g5ednsl&ms=ltu&mt=1726944890&mv=u&mvi=5&pl=24&lsparams=mh,mip,mm,mn,ms,mv,mvi,pl&lsig=ABPmVW0wRAIgDrs3FgPgrRQWs6tGpX76WIgVrXSBTMYbr98mAc60S9cCIDRa4x7zjZOcbW-0JPNT4hcqgkxZqghMUDLkdCzyhCXv', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 9
+                <i class="fas fa-film"></i> الحلقة 9
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -813,7 +859,7 @@ body {
                    <ul class="season-episodes"> 
             <li class="episode-item">
             <button class="episode-button" onclick="playEpisode('https://l.top4top.io/m_31871v0l91.mp4', this)">
-                <i class="fas fa-play-circle"></i> الحلقة 10
+                <i class="fas fa-film"></i> الحلقة 10
             </button>
             <div class="video-container" id="videoContainer1">
                 <video id="videoPlayer1" controls>
@@ -916,26 +962,19 @@ function closeOverlay() {
     document.body.classList.remove('blocked');  // السماح بالتفاعل مع المحتوى
 }
 
-        //من هنا 
+function searchEpisodes() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const episodeButtons = document.querySelectorAll('.episode-item');
 
-function decryptContent(encrypted) {
-    let decoded = atob(encrypted);
-    return decoded;
-}
-
-
-(function() {
-    setInterval(function() {
-        var devtools = /./;
-        devtools.toString = function() {
-            return 'DevTools';
-        };
-        console.log(devtools);
-        if (devtools.open) {
-            document.body.innerHTML = 'Access Denied';
+    episodeButtons.forEach(button => {
+        const episodeText = button.innerText.toLowerCase();
+        if (episodeText.includes(input)) {
+            button.style.display = 'block'; // عرض الحلقة
+        } else {
+            button.style.display = 'none'; // إخفاء الحلقة
         }
-    }, 1000);
-})();
+    });
+}
     </script>
 </body>
 </html>
