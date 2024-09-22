@@ -918,19 +918,16 @@ function closeOverlay() {
 
         //من هنا 
 
-        <script type="text/javascript">
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
+<script>
+function decryptContent(encrypted) {
+    let decoded = atob(encrypted);
+    return decoded;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    let encryptedContent = "U29tZSBzZWNyZXQgY29udGVudA==";  // مثال على محتوى مشفر
+    document.getElementById("content").innerText = decryptContent(encryptedContent);
 });
-        <script type="text/javascript">
-document.onkeydown = function(e) {
-    if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
-        return false;
-    }
-};
     </script>
 </body>
 </html>
