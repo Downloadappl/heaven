@@ -33,6 +33,17 @@ body {
     margin: 0;
 }
 
+/* تطبيق خط Harmattan على جميع النصوص */
+body {
+    font-family: 'Harmattan', sans-serif;
+}
+
+/* تطبيق الخط بحجم أكبر في العناوين */
+h1, h2, h3 {
+    font-family: 'Harmattan', sans-serif;
+    font-weight: 700; /* استخدام الوزن الثقيل من الخط */
+}
+
         h1 {
             color: #f5a623;
             font-size: 3.5em;
@@ -124,7 +135,7 @@ h1:hover {
 }
 
 .episode-item {
-    width: 400px;
+    width: 450px;
     margin: 0;
 }
 
@@ -381,17 +392,17 @@ body {
 .story-title {
     font-size: 1.8em;
     color: #f5a623;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: center;
     position: relative;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 
 .story-text {
     color: #d1d1d1;
     font-size: 1.1em;
     line-height: 1.8;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
     position: relative;
 }
 
@@ -402,7 +413,7 @@ body {
 .category-title {
     color: #f5a623;
     font-size: 1.4em;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .category-button {
@@ -449,7 +460,7 @@ body {
     height: 3px;
     background: #f5a623;
     display: block;
-    margin: 10px auto;
+    margin: 1px auto;
     animation: title-underline 1.5s ease infinite;
 }
 
@@ -462,17 +473,56 @@ body {
     }
 }
 
+/* تصميم الهيدر */
+header {
+    background-color: #141414; /* لون شبيه بنتفليكس */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
 
+header img.logo {
+    height: 50px; /* حجم الشعار */
+}
+
+header .theme-toggle {
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header .theme-toggle:hover {
+    transform: rotate(45deg);
+    color: #e50914; /* اللون الرئيسي لنتفليكس */
+}
+
+/* لإضافة مساحة تحت الهيدر الثابت */
+body {
+    padding-top: 70px; /* إزاحة المحتوى لأسفل بمقدار ارتفاع الهيدر */
+}
     </style>
 </head>
 <body class="dark-mode">
-    <div class="theme-toggle" onclick="toggleTheme()">
-        <i class="fas fa-moon"></i>
-    </div>
+    <header>
+        <a href="https://fire-wine.vercel.app/" target="_blank">
+            <img src="https://b.top4top.io/p_31868txbm2.png" alt="Logo" class="logo">
+        </a>
+        <div class="theme-toggle" onclick="toggleTheme()">
+       
+        </div>
+    </header>
+   
     <h1></h1>
-    <div class="welcome-message" style="font-size: 1.2em; margin-bottom: 20px;">شاهد مسلسل الجنة والنار مجانا على موقعنا الالكتروني</div>
-    <ul class="episode-list">
-        <img src="https://media.infoplusnetwork.com/archive/image/2024/8/26/55b9212a-e8b9-419b-b972-3480dc6eaafe.jpg" alt="وصف الصورة" style="width: 250px; height: auto;">
+    <div class="welcome-message" style="font-size: 1.2em; margin-bottom: 20px;">شاهد أحدث المسلسلات مجاناً الآن وبجودة عالية على موقعنا!</div>
+    </div>
+    <!-- بقية المحتوى -->
 <div class="story-section">
     <h2 class="story-title">القصة</h2>
     <p class="story-text">
@@ -762,7 +812,7 @@ body {
 
                    <ul class="season-episodes"> 
             <li class="episode-item">
-            <button class="episode-button" onclick="playEpisode('https://dso6.raed.net:447/files/%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%AC%D8%AF%D9%8A%D8%AF-35-[BF53298].mp4', this)">
+            <button class="episode-button" onclick="playEpisode('https://l.top4top.io/m_31871v0l91.mp4', this)">
                 <i class="fas fa-play-circle"></i> الحلقة 10
             </button>
             <div class="video-container" id="videoContainer1">
@@ -856,10 +906,7 @@ body {
         window.onload = function() {
     if (localStorage.getItem('subscribed') === 'true') {
         document.getElementById('overlay').style.display = 'none';
-        document.body.classList.remove('blocked');
-    } else {
-        document.getElementById('overlay').style.display = 'flex';
-        document.body.classList.add('blocked');  // منع التفاعل مع المحتوى الخلفي
+        document.body.classList.remove('blocked');  // منع التفاعل مع المحتوى الخلفي
     }
 }
 
