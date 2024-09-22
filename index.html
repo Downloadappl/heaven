@@ -915,6 +915,22 @@ function closeOverlay() {
     localStorage.setItem('subscribed', 'true');
     document.body.classList.remove('blocked');  // السماح بالتفاعل مع المحتوى
 }
+
+        //من هنا 
+
+        <script type="text/javascript">
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+        <script type="text/javascript">
+document.onkeydown = function(e) {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
+        return false;
+    }
+};
     </script>
 </body>
 </html>
