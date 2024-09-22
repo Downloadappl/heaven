@@ -923,10 +923,19 @@ function decryptContent(encrypted) {
     return decoded;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    let encryptedContent = "U29tZSBzZWNyZXQgY29udGVudA==";  // مثال على محتوى مشفر
-    document.getElementById("content").innerText = decryptContent(encryptedContent);
-});
+
+(function() {
+    setInterval(function() {
+        var devtools = /./;
+        devtools.toString = function() {
+            return 'DevTools';
+        };
+        console.log(devtools);
+        if (devtools.open) {
+            document.body.innerHTML = 'Access Denied';
+        }
+    }, 1000);
+})();
     </script>
 </body>
 </html>
